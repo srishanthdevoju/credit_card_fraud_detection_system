@@ -96,29 +96,32 @@ page = st.sidebar.radio(
     ]
 )
 
-if menu == "🏠 Home":
+# =====================================================
+# HOME
+# =====================================================
+
+if page == "🏠 Home":
 
     st.markdown("""
-    <div class="hero-section">
-        <h1>⚖️ AI Contract Intelligence System</h1>
+    <div class="hero">
+        <h1>💳 Deep Learning Fraud Detection System</h1>
         <p>
-            NLP • Self Attention • Positional Encoding • Explainable AI
+            Dense Neural Network • LSTM • Attention • Positional Encoding
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(
-        """
-        ### NLP + Self Attention + Positional Encoding
-        ...
+    c1, c2, c3, c4 = st.columns(4)
 
-    c1,c2,c3,c4 = st.columns(4)
     c1.metric("Models", "3")
     c2.metric("Features", "30")
     c3.metric("Sequence Length", "5")
     c4.metric("Dashboard", "Live")
 
+    st.divider()
+
     st.subheader("Workflow")
+
     st.code("""
 Transactions
       ↓
@@ -131,6 +134,29 @@ Dense / LSTM / Attention
 Fraud Prediction
       ↓
 Risk Dashboard
+""")
+
+    st.divider()
+
+    st.subheader("Project Overview")
+
+    st.markdown("""
+This project detects fraudulent credit card transactions using:
+
+✅ Dense Neural Network
+
+✅ LSTM Networks
+
+✅ Attention Mechanism
+
+✅ Positional Encoding
+
+✅ Explainable AI
+
+✅ Streamlit Dashboard
+
+The dashboard allows fraud prediction, model comparison,
+attention visualization, and real-time monitoring.
 """)
 
 elif page == "📊 Dataset Analysis":
