@@ -7,6 +7,14 @@ import plotly.graph_objects as go
 import joblib
 import random
 import time
+def load_css():
+    with open("style.css") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
 
 st.set_page_config(
     page_title="Fraud Intelligence Dashboard",
